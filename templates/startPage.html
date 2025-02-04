@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>game of magic</title>
+    <rel favicon="C:\Users\manna\Pictures\wallpaperflare.com_wallpaper (2).jpg"></rel>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pageStyle.css') }}">
+</head>
+<body>
+    <h1>choose one of the following and press next</h1>
+    <table>
+        <tr>
+            <td>apple</td>
+        </tr>
+        <tr>
+            <td>banana</td>
+        </tr>
+        <tr>
+            <td>grape</td>
+        </tr>
+        <tr>
+            <td>mango</td>
+        </tr>
+        <tr>
+            <td>orange</td>
+        </tr>
+        <tr>
+            <td>pine apple</td>
+        </tr>
+        <tr>
+            <td>pomegranate</td>
+        </tr>
+        <tr>
+            <td>strawberry</td>
+        </tr>
+    </table>
+    <br>
+    <div class="button-container">
+    <form action="{{ url_for('page1') }}" method="post">
+        <button type="submit" class="button">Next</button>
+    </form>
+    </div>
+    <!--<script src="page.js"></script>
+    <a href="page1.html"><button><b>next</b></button>-->
+</body>

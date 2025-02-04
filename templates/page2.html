@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>game of magic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pageStyle.css') }}">
+</head>
+<body>
+    <h1>Is your selected item present among these?</h1>
+    <table>
+        <tr>
+            <td>grape</td>
+        </tr>
+        <tr>
+            <td>orange</td>
+        </tr>
+        <tr>
+            <td>strawberry</td>
+        </tr>
+    </table>
+    <div class="button-container">
+        <button onclick="sendNumberAndRedirect(300)" class="button">Yes</button>
+        <button onclick="sendNumberAndRedirect(0)" class="button">No</button>
+    </div>
+    <script>
+        function sendNumberAndRedirect(number) {
+            fetch('/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ number: number })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Received response:', data);
+                // Redirect to another page after receiving the response
+                window.location.href = '/page3';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>

@@ -1,0 +1,63 @@
+html, body{
+    height:100%;
+    margin:0;
+    padding:0;
+    justify-content: center;
+    box-sizing:border-box;
+    background-color: #FFA500;
+}
+h1{
+    text-align:center;
+    text-shadow:5px 5px 2px chocolate;
+}
+.content {
+    width: 100%;
+    display: flex;
+}
+table {
+    width: auto;
+    margin:auto;
+    border-collapse: separate;
+    border-spacing: 0 20px; /* Two lines (20px) gap between rows */
+}
+table tr {
+    background-color: transparent; /* Ensure background color applies only to td */
+    border-color: black;
+}
+table td {
+    text-align: center;
+    padding: 20px;
+    background-color: silver;
+    border-radius: 40px; /* Curved corners */
+    border:black; /* No borders around the cells */
+    font-size: 18px; /* Adjust text size */
+    font-family: Arial, sans-serif;
+    font-weight:bold;
+    text-shadow: 2 2 5 #FFA500;
+}
+form{
+    justify-content: center;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between; /* Distribute buttons with space between them */
+    /*align-items: center;           /* Center buttons vertically */
+    padding: 0 42%;                /* Add 30% padding from the left and right edges */
+    /*height: 100vh;                 /* Full viewport height for demonstration */
+}
+
+/* Style for buttons */
+.button {
+    background-color: #4CAF50; /* Green background color */
+    color: white;              /* White text color */
+    border: none;              /* Remove default button border */
+    padding: 10px 20px;        /* Add padding inside the button */
+    border-radius: 12px;       /* Curved corners */
+    font-size: 16px;           /* Font size */
+    cursor: pointer;           /* Pointer cursor on hover */
+    outline: none;             /* Remove focus outline */
+}
+
+.button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
