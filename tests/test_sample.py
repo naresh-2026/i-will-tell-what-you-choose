@@ -18,4 +18,4 @@ def test_home_page(client):
     """Test if the first page (startPage.html) loads when the app is run."""
     response = client.get("/")
     assert response.status_code == 200  # Check if the response is OK
-    assert b"startPage" in response.data  # Ensure 'startPage' content is in response
+    assert b"game of magic" in response.data  # Ensure 'startPage' content is in response
